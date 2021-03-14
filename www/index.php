@@ -17,7 +17,7 @@
 
                 </div>
             </div>
-            <div class="col-12 col-md-6 hero-right">
+            <div class="d-none d-md-block col-12 col-md-6 hero-right">
                 <div class="full-height d-flex justify-content-end align-items-center">
                     <div class="hero-img__wrapper">
                         <img src="/assets/imgs/hero.png" class="hero-img" alt="">
