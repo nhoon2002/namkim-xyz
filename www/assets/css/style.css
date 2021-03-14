@@ -17,9 +17,20 @@
     height: 100%;
 }
 
+.hero-content {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .hero-content {
+        text-align: left;
+    }
+}
+
 .hero-content h1 {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
-    margin-bottom: 0;
+    margin-bottom: 6px;
+    line-height: 1;
 }
 
 .hero-img__wrapper {
@@ -60,7 +71,15 @@ img {
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
+html {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 body {
+    width: 100%;
     color: #111111;
     font-family: 'Nunito Sans', sans-serif;
 }
