@@ -41,6 +41,7 @@
     background-color: #667eea;
     clip-path: circle(40% at center);
     max-width: 400px;
+    width: 100%;
     /* OLD VALUE example: circle(245px, 140px, 50px); */
     /* Yep, even the new clip-path has deprecated stuff. */
 }
