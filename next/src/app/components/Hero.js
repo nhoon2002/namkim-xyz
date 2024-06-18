@@ -7,7 +7,7 @@ const Hero = () => {
                 <div className="flex flex-col md:flex-row items-center">
                     <div className="md:w-1/2 text-center md:text-left">
                         <div className="hero-content">
-                            <h1 className="text-4xl font-mono mb-1">Hi, I'm <span className="text-indigo-400">Nam Kim</span>.</h1>
+                            <h1 className="text-4xl font-mono mb-1">Hi, I&apos;m <span className="text-indigo-400">Nam Kim</span>.</h1>
                             <h1 className="text-4xl font-mono mb-1">Software Developer</h1>
                             <p>Specialized in Front-End Development</p>
                             <div className="flex flex-row mt-5 gap-1 justify-center md:justify-start">
