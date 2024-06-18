@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+body {
+  @apply font-sans text-gray-900;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.container {
+  @apply max-w-7xl;
+}
+
+.font-mono {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.hero-img {
+  @apply bg-indigo-400 rounded-full max-w-xs;
+  clip-path: circle(40% at center);
+}
+
+.hero-content h1 {
+  @apply text-shadow-lg mb-1 leading-none;
+}
+
+.text-shadow-lg {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+}
+
+
+.drop-shadow-filter {
+  filter: drop-shadow(-5px 10px 6px rgba(0, 0, 0, 0.5));
+}
