@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
-import Projects from './components/Projects';
+import WorkExperience from './components/Projects';
 import Contact from './components/Contact';
 
 /**
@@ -47,8 +47,8 @@ export default function Home() {
       {/* About Section */}
       <About />
       
-      {/* Projects Section */}
-      <Projects />
+      {/* Work Experience Section */}
+      <WorkExperience />
       
       {/* Contact Section */}
       <Contact />
