@@ -3,17 +3,12 @@
 import { useEffect, useState } from 'react';
 
 /**
- * Contact section component with contact form
+ * Contact section component with 3D business card
  * @returns {JSX.Element} Contact section
  */
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [submitStatus, setSubmitStatus] = useState('idle');
+  const [isHovered, setIsHovered] = useState(false);
 
   /**
    * Initialize section visibility on mount
@@ -39,50 +34,31 @@ export default function Contact() {
   }, []);
 
   /**
-   * Handle form input changes
-   * @param {Event} e - Input change event
+   * Handle phone click
    */
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+  const handlePhoneClick = () => {
+    window.open('tel:+17144032020', '_self');
   };
 
   /**
-   * Handle form submission
-   * @param {Event} e - Form submit event
+   * Handle email click
    */
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    setSubmitStatus('sending');
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitStatus('sent');
-      setFormData({ name: '', email: '', message: '' });
-      
-      setTimeout(() => {
-        setSubmitStatus('idle');
-      }, 2000);
-    }, 1500);
+  const handleEmailClick = () => {
+    window.open('mailto:alex.nh.kim@gmail.com', '_self');
   };
 
   /**
-   * Get submit button text based on status
-   * @returns {string} Button text
+   * Handle LinkedIn click
    */
-  const getSubmitButtonText = () => {
-    switch (submitStatus) {
-      case 'sending':
-        return 'SENDING...';
-      case 'sent':
-        return 'MESSAGE SENT';
-      default:
-        return 'SEND MESSAGE';
-    }
+  const handleLinkedInClick = () => {
+    window.open('https://www.linkedin.com/in/alex-nam-kim-04388070/', '_blank');
+  };
+
+  /**
+   * Handle website click
+   */
+  const handleWebsiteClick = () => {
+    window.open('https://www.namkim.xyz', '_blank');
   };
 
   return (
@@ -93,48 +69,46 @@ export default function Contact() {
         </div>
         <div className="contact-content">
           <p>Ready to build something amazing together?</p>
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-              />
+          
+          <div 
+            className={`business-card ${isHovered ? 'hovered' : ''}`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <div className="card-front">
+              <div className="card-header">
+                <h3 className="card-name">Nam Hoon Kim</h3>
+                <div className="card-title">Full-Stack Developer</div>
+                <p className="card-location">Los Angeles, CA</p>
+              </div>
+              
+              <div className="card-contact">
+                <div className="contact-item" onClick={handlePhoneClick}>
+                  <span className="contact-icon">📞</span>
+                  <span className="contact-text">+1 (714) 403-2020</span>
+                </div>
+                
+                <div className="contact-item" onClick={handleEmailClick}>
+                  <span className="contact-icon">✉️</span>
+                  <span className="contact-text">alex.nh.kim@gmail.com</span>
+                </div>
+                
+                <div className="contact-item" onClick={handleLinkedInClick}>
+                  <span className="contact-icon">💼</span>
+                  <span className="contact-text">LinkedIn Profile</span>
+                </div>
+                
+                <div className="contact-item" onClick={handleWebsiteClick}>
+                  <span className="contact-icon">🌐</span>
+                  <span className="contact-text">www.namkim.xyz</span>
+                </div>
+              </div>
+              
+              <div className="card-footer">
+                <div className="card-tagline">Building digital experiences with clean code</div>
+              </div>
             </div>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                value={formData.message}
-                onChange={handleInputChange}
-                required
-              ></textarea>
-            </div>
-            <button 
-              type="submit" 
-              className="submit-btn"
-              disabled={submitStatus === 'sending'}
-            >
-              {getSubmitButtonText()}
-            </button>
-          </form>
+          </div>
         </div>
       </div>
     </section>

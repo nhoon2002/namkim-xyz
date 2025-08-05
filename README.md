@@ -26,7 +26,7 @@ next/
 │       │   ├── Navigation.js      # Theme toggle & mobile menu
 │       │   ├── Hero.js            # Hero section with typing effect
 │       │   ├── About.js           # About section with code block
-│       │   ├── Projects.js        # Projects grid
+│       │   ├── Projects.js        # Work experience section
 │       │   └── Contact.js         # Contact form
 │       ├── globals.css            # Global styles & theming
 │       ├── layout.js              # Root layout with metadata
@@ -69,7 +69,7 @@ next/
 - ✅ **Scroll Animations** - Sections animate on scroll
 - ✅ **Contact Form** - Functional form with validation
 - ✅ **Code Syntax Highlighting** - Styled code blocks
-- ✅ **Project Showcase** - Interactive project cards
+- ✅ **Work Experience Showcase** - Interactive job history cards
 
 ### Technical Features
 - ✅ **Next.js 15** - Latest framework features
@@ -129,7 +129,7 @@ Modify CSS custom properties in `globals.css`:
 ### Content Updates
 - **Hero Section**: Update name and title in `Hero.js`
 - **About Section**: Modify text and code block in `About.js`
-- **Projects**: Add/edit projects in `Projects.js`
+- **Work Experience**: Add/edit job history in `Projects.js` (WorkExperience component)
 - **Contact**: Update form handling in `Contact.js`
 
 ### Styling

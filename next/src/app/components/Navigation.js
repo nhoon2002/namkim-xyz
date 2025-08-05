@@ -61,8 +61,8 @@ export default function Navigation({ theme, onThemeToggle }) {
         <a href="#about" onClick={() => scrollToSection('about')}>
           About
         </a>
-        <a href="#projects" onClick={() => scrollToSection('projects')}>
-          Projects
+        <a href="#work-experience" onClick={() => scrollToSection('work-experience')}>
+          Experience
         </a>
         <a href="#contact" onClick={() => scrollToSection('contact')}>
           Contact
