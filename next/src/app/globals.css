@@ -199,10 +199,11 @@ section {
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.8s ease;
+    padding-bottom: 200px;
 }
 
-.section:not(:first-of-type) {
-    padding-bottom: 200px;
+section:first-of-type {
+    padding-bottom: 0;
 }
 
 section.visible {

@@ -44,12 +44,12 @@ export default function Navigation({ theme, onThemeToggle }) {
         {theme === 'dark' ? '☀' : '🌙'}
       </button>
       
-      <button 
+      {/* <button 
         className="nav-toggle" 
         onClick={() => setIsMenuOpen(true)}
       >
         MENU
-      </button>
+      </button> */}
       
       <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
         <button className="close-nav" onClick={closeMenu}>
