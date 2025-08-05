@@ -201,13 +201,13 @@ section {
     transition: all 0.8s ease;
 }
 
+.section:not(:first-of-type) {
+    padding-bottom: 200px;
+}
+
 section.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-section:last-of-type {
-    padding-bottom: 50vh;
 }
 
 /* Hero Section */
