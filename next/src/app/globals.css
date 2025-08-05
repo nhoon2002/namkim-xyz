@@ -208,7 +208,7 @@ section.visible {
 }
 
 section:last-of-type {
-    padding-bottom: 100vh;
+    padding-bottom: 50vh;
 }
 
 /* Hero Section */
@@ -251,17 +251,10 @@ section:last-of-type {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    padding: 1.5rem;
-    border-radius: 12px;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
-}
-
-.qr-container:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    border-color: var(--text-muted);
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .qr-code:hover {
@@ -275,10 +268,6 @@ section:last-of-type {
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     margin-bottom: 0.5rem;
-    width: 120px;
-    height: 120px;
-    background: white;
-    padding: 8px;
 }
 
 .qr-label {

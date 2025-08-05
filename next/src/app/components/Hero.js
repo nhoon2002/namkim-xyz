@@ -93,7 +93,7 @@ export default function Hero() {
           <div 
             className="qr-container"
             style={{ opacity: qrOpacity }}
-            onClick={() => window.open('https://drive.google.com/file/d/1mBHunGzk2JWkDfo7hvG0bFBg00dxhYIW/view?usp=sharing', '_blank')}
+            onClick={() => window.open('https://docs.google.com/document/d/1zTxFSpPPCmfsUygOeUXhHGxyTMh8zuq-E7vCXz7o06c/edit?usp=sharing', '_blank')}
           >
             {qrCodeDataUrl && (
               <img 
