@@ -62,7 +62,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className={isVisible ? 'visible' : ''}>
+    <section style={{ display: 'none' }} id="contact" className={isVisible ? 'visible' : ''}>
       <div className="container">
         <div className="section-header">
           <h2>LET&apos;S CONNECT</h2>
